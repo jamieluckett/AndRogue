@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@color/colorBackground">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:contentDescription="AndRogue logo"
+        android:layout_height="58dp"
+        android:background="@drawable/logo"
+        android:layout_weight="0.13" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Start the game"
+        android:elevation="0dp"
+        android:onClick="onClickStartGame"
+        android:text="@string/button_startGame" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Quit the game"
+        android:elevation="0dp"
+        android:onClick="onClickQuitGame"
+        android:text="@string/button_quitGame" />
+
+    <ImageView
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="At Symbol"
+        android:background="@drawable/at"
+        android:layout_weight="0.84" />
+
+</LinearLayout>
