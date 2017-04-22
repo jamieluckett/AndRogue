@@ -17,8 +17,7 @@ import com.readinguni.rq016842.javaroguelike.R;
 
 import java.util.ArrayList;
 
-public class TheGame extends GameThread
-{
+public class TheGame extends GameThread {
     private Bitmap mWall, mGround, mDStairs;
     private Dungeon mDungeon;
     public boolean first;
@@ -37,8 +36,7 @@ public class TheGame extends GameThread
 
 
     //This is run before anything else, so we can prepare things here
-    public TheGame(GameView gameView)
-    {
+    public TheGame(GameView gameView) {
         //House keeping
         super(gameView);
         //Prepare the image so we can draw it on the screen (using a canvas)
@@ -158,6 +156,9 @@ public class TheGame extends GameThread
             }
         };
         mapGenThread.start();
+        updateScore(0);
+        updateHP(10,10);
+        setEXP(0);
         initButtons(dimensions);
     }
 
@@ -315,6 +316,7 @@ public class TheGame extends GameThread
         int exp = mDungeon.getFloor(currentFloor).movePlayer(direction);
         updateScore((long)exp);
         if(exp > 0) {
+            setEXP(mDungeon.getFloor(currentFloor).getPlayer().getEXP());
             boolean levelUp = (mDungeon.getFloor(currentFloor).getPlayer()).addEXP(exp);
             if(levelUp) {
                 // LEVEL UP
@@ -322,6 +324,8 @@ public class TheGame extends GameThread
                 Toast levelToast = Toast.makeText(cnxt, "Level Up! Lvl " + String.valueOf(oldLevel+1)
                                 + " -> Lvl " + String.valueOf(oldLevel + 2) + "!", Toast.LENGTH_LONG);
                 levelToast.show();
+
+                setLVL(mDungeon.getFloor(currentFloor).getPlayer().getLevel() + 1);
                 updateScore(1);
             }
         }
@@ -338,6 +342,8 @@ public class TheGame extends GameThread
             mDungeon.takeTurn(currentFloor);
             updateHP(mDungeon.getFloor(currentFloor).getPlayer().getHP(), mDungeon.getFloor(currentFloor).getPlayer().getMaxHP());
             //mDungeon.logDungeon();
+            updateHP(mDungeon.getFloor(currentFloor).getPlayer().getHP(),
+                    mDungeon.getFloor(currentFloor).getPlayer().getMaxHP());
             if (!mDungeon.getFloor(currentFloor).getPlayer().getAlive()) loseGame();
         }
     }
@@ -360,12 +366,6 @@ public class TheGame extends GameThread
     //This is run just before the game "scenario" is printed on the screen
     @Override
     protected void updateGame(float secondsElapsed) {
-        //Log.v("FPS: ", String.valueOf((1000/secondsElapsed) / 1000));
-        updateHP(mDungeon.getFloor(currentFloor).getPlayer().getHP(),
-                mDungeon.getFloor(currentFloor).getPlayer().getMaxHP());
-        Player temp = mDungeon.getFloor(currentFloor).getPlayer();
-        setEXP(temp.getEXP());
-        setLVL(temp.getLevel() + 1);
-        waitingTurn = true;
+        Log.v("FPS: ", String.valueOf((1000/secondsElapsed) / 1000));
     }
 }
