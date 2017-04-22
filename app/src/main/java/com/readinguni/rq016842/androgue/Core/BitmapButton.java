@@ -1,8 +1,4 @@
-package com.readinguni.rq016842.javaroguelike.Core;
-
-/**
- * Created by Jamie on 17/04/2017.
- */
+package com.readinguni.rq016842.androgue.Core;
 
 public class BitmapButton
 {

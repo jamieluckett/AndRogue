@@ -1,4 +1,4 @@
-package com.readinguni.rq016842.javaroguelike.Core;
+package com.readinguni.rq016842.androgue.Core;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -10,10 +10,9 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.readinguni.rq016842.javaroguelike.Dungeon.Dungeon;
-import com.readinguni.rq016842.javaroguelike.Dungeon.Floor;
-import com.readinguni.rq016842.javaroguelike.Mobs.Player;
-import com.readinguni.rq016842.javaroguelike.R;
+import com.readinguni.rq016842.androgue.Dungeon.Dungeon;
+import com.readinguni.rq016842.androgue.Dungeon.Floor;
+import com.readinguni.rq016842.androgue.R;
 
 import java.util.ArrayList;
 

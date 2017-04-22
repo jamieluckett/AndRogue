@@ -1,4 +1,4 @@
-package com.readinguni.rq016842.javaroguelike.Core;
+package com.readinguni.rq016842.androgue.Core;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -13,7 +13,7 @@ import android.view.SurfaceHolder;
 import android.view.View;
 import android.util.Log;
 
-import com.readinguni.rq016842.javaroguelike.R;
+import com.readinguni.rq016842.androgue.R;
 
 public abstract class GameThread extends Thread {
 	//Different mMode states

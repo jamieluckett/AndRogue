@@ -1,17 +1,14 @@
-package com.readinguni.rq016842.javaroguelike.Core;
+package com.readinguni.rq016842.androgue.Core;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.TextView;
 
-import com.readinguni.rq016842.javaroguelike.R;
+import com.readinguni.rq016842.androgue.R;
 
 public class MainActivity extends Activity {
 

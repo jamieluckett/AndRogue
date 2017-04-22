@@ -1,6 +1,6 @@
-package com.readinguni.rq016842.javaroguelike.Mobs;
+package com.readinguni.rq016842.androgue.Mobs;
 
-import com.readinguni.rq016842.javaroguelike.Abstract.Mob;
+import com.readinguni.rq016842.androgue.Abstract.Mob;
 
 /**
  * Created by Jamie on 18/04/2017.

@@ -1,8 +1,4 @@
-package com.readinguni.rq016842.javaroguelike.Abstract;
-
-/**
- * Created by Jamie on 30/03/2017.
- */
+package com.readinguni.rq016842.androgue.Abstract;
 
 import android.graphics.Point;
 import android.util.Log;
@@ -43,9 +39,6 @@ public abstract class  Actor
             this.alive = false;
             this.hp = 0;
         }
-        Log.v("IncmAck/thsDef/CalcAtck", String.valueOf(incomingAttack) + "/" + String.valueOf(this.def) + "/"
-                + String.valueOf(damageTaken));
-
         return !this.alive; //return if killed
     }
 
@@ -82,7 +75,7 @@ public abstract class  Actor
                 boolean inOrder = false;
                 int temp;
 
-                //everyone likes a good ol bubblesort (sorry)
+                //everyone likes a good ol bubble sort (sorry)
 
                 /*sort the array of proximity measurements while also keeping the index of the
                 measurements. we sort 2 arrays here to do this*/

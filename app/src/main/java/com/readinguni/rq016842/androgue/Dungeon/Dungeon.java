@@ -1,14 +1,10 @@
-package com.readinguni.rq016842.javaroguelike.Dungeon;
+package com.readinguni.rq016842.androgue.Dungeon;
 
 import android.util.Log;
 
-import com.readinguni.rq016842.javaroguelike.Mobs.Player;
+import com.readinguni.rq016842.androgue.Mobs.Player;
 
 import java.util.ArrayList;
-
-/**
- * Created by Jamie on 30/03/2017.
- */
 
 public class Dungeon
 {

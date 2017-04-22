@@ -1,21 +1,18 @@
-package com.readinguni.rq016842.javaroguelike.Dungeon;
+package com.readinguni.rq016842.androgue.Dungeon;
 
-/**
- * Created by Jamie on 30/03/2017.
- */
 import java.util.ArrayList;
 import java.util.Random;
 
 import android.graphics.Point;
 import android.util.Log;
 
-import com.readinguni.rq016842.javaroguelike.Abstract.Actor;
-import com.readinguni.rq016842.javaroguelike.Mobs.Crocodile;
-import com.readinguni.rq016842.javaroguelike.Mobs.Dragon;
-import com.readinguni.rq016842.javaroguelike.Mobs.MoustachedGent;
-import com.readinguni.rq016842.javaroguelike.Mobs.Player;
-import com.readinguni.rq016842.javaroguelike.Mobs.SkeletonBoss;
-import com.readinguni.rq016842.javaroguelike.Mobs.Wolf;
+import com.readinguni.rq016842.androgue.Abstract.Actor;
+import com.readinguni.rq016842.androgue.Mobs.Crocodile;
+import com.readinguni.rq016842.androgue.Mobs.Dragon;
+import com.readinguni.rq016842.androgue.Mobs.MoustachedGent;
+import com.readinguni.rq016842.androgue.Mobs.Player;
+import com.readinguni.rq016842.androgue.Mobs.Skeleton;
+import com.readinguni.rq016842.androgue.Mobs.Wolf;
 
 public class Floor
 {
@@ -181,7 +178,7 @@ public class Floor
                         tiles.get(randX).get(randY).setActor(new MoustachedGent());
                         break;
                     case 4:
-                        tiles.get(randX).get(randY).setActor(new SkeletonBoss());
+                        tiles.get(randX).get(randY).setActor(new Skeleton());
                         break;
                 }
             }

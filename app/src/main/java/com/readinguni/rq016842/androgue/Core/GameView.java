@@ -1,4 +1,4 @@
-package com.readinguni.rq016842.javaroguelike.Core;
+package com.readinguni.rq016842.androgue.Core;
 
 import android.content.Context;
 import android.content.Intent;

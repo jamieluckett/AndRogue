@@ -1,12 +1,8 @@
-package com.readinguni.rq016842.javaroguelike.Mobs;
-
-/**
- * Created by Jamie on 30/03/2017.
- */
+package com.readinguni.rq016842.androgue.Mobs;
 
 import android.util.Log;
 
-import com.readinguni.rq016842.javaroguelike.Abstract.Mob;
+import com.readinguni.rq016842.androgue.Abstract.Mob;
 
 import java.util.Random;
 

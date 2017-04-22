@@ -1,8 +1,4 @@
-package com.readinguni.rq016842.javaroguelike.Abstract;
-
-/**
- * Created by Jamie on 30/03/2017.
- */
+package com.readinguni.rq016842.androgue.Abstract;
 
 public abstract class Mob extends Actor
 {

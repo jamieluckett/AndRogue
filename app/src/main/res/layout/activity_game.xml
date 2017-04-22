@@ -2,7 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <com.readinguni.rq016842.javaroguelike.Core.GameView
+    <com.readinguni.rq016842.androgue.Core.GameView
         android:id="@+id/gamearea"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"/>

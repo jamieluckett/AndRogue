@@ -1,4 +1,4 @@
-package com.readinguni.rq016842.javaroguelike.Dungeon;
+package com.readinguni.rq016842.androgue.Dungeon;
 
 /**
  * Created by Jamie on 30/03/2017.
