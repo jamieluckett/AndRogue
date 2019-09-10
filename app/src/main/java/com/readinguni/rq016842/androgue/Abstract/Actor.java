@@ -71,7 +71,6 @@ public abstract class  Actor
                 //Log.v("totals pre sort", Arrays.toString(totals));
                 //Log.v("coords  pre sort", Arrays.toString(coords));
 
-
                 boolean inOrder = false;
                 int temp;
 

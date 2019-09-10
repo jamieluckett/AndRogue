@@ -24,8 +24,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private TextView mHPView;
     private TextView mLVLView;
     private TextView mEXPView;
-
-
     private TextView mStatusView;
 
     Sensor accelerometer;

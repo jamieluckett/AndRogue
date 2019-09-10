@@ -56,8 +56,6 @@ public abstract class GameThread extends Thread {
     protected long lvl = 0;
     protected long exp = 0;
 
-
-
     //Used for time keeping
     private long now;
     private float elapsed;
@@ -305,7 +303,6 @@ public abstract class GameThread extends Thread {
         this.mMode = mMode;
     }
 
-
     /* ALL ABOUT SCORES */
 
     //Send a score to the View to view
@@ -394,6 +391,4 @@ public abstract class GameThread extends Thread {
     protected CharSequence getMaxHPString() {
         return Long.toString(Math.round(this.maxHP));
     }
-
-
 }

@@ -33,7 +33,6 @@ public class TheGame extends GameThread {
     protected static int NO_OF_FLOORS = 5;
     public ArrayList<Bitmap> backgrounds = new ArrayList<>();
 
-
     //This is run before anything else, so we can prepare things here
     public TheGame(GameView gameView) {
         //House keeping
@@ -188,7 +187,7 @@ public class TheGame extends GameThread {
             first = false;
             backgrounds.clear();
         }
-        if(backgrounds.size() == currentFloor)
+        if(backgrounds.size().equals(currentFloor))
         {
             backgrounds.add(loadBackground(mDungeon.getFloor(currentFloor), canvas));
         }
@@ -259,7 +258,9 @@ public class TheGame extends GameThread {
                 if (!floor.tiles.get(x).get(y).getEmpty() && floor.tiles.get(x).get(y).getActor() != null) {
                     float drawX = (float) ((x * TILE_SIZE) + XOFFSET + floor.tiles.get(x).get(y).getActor().getOffsets().x);
                     float drawY = (float) ((y * TILE_SIZE) + floor.tiles.get(x).get(y).getActor().getOffsets().y);
-                    canvas.drawBitmap(actorSprites.get(floor.tiles.get(x).get(y).getActor().getSpriteNo()), drawX, drawY, null);
+                    canvas.drawBitmap(actorSprites.get(
+                            floor.tiles.get(x).get(y).getActor().getSpriteNo()), drawX, drawY, null
+                    );
                     floor.tiles.get(x).get(y).getActor().iterateOffsets();
                 }
             }
@@ -281,7 +282,10 @@ public class TheGame extends GameThread {
                 canvas.drawBitmap(buttonSprites.get(toDraw.spriteNo), (float) toDraw.x, (float) toDraw.y, null);
             }
         }
-        else Log.e("Draw Error", "No Buttons in buttons array");
+        else
+        {
+            Log.e("Draw Error", "No Buttons in buttons array");
+        }
     }
 
     /**
@@ -308,12 +312,12 @@ public class TheGame extends GameThread {
      */
     public void takeTurn(int direction) {
         turnCount++;
-        if(turnCount%12 == 0) {
+        if(turnCount % 12 == 0) {
             turnCount = 0;
             updateScore(-1);
         }
         int exp = mDungeon.getFloor(currentFloor).movePlayer(direction);
-        updateScore((long)exp);
+        updateScore((long) exp);
         if(exp > 0) {
             setEXP(mDungeon.getFloor(currentFloor).getPlayer().getEXP());
             boolean levelUp = (mDungeon.getFloor(currentFloor).getPlayer()).addEXP(exp);

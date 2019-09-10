@@ -34,7 +34,7 @@ public class Player extends Mob
      * @return True if leveled up, False otherwise
      */
     public boolean addEXP(int amount) {
-        this.exp+= amount;
+        this.exp += amount;
         Log.v("EXP/LVL", String.valueOf(this.exp) + "/" + String.valueOf(this.level));
         if (this.exp > levels[this.level])
         {
@@ -51,8 +51,8 @@ public class Player extends Mob
         this.level++;
         this.maxHP += this.randGen.nextBoolean() ? 3:4; //random choice between +3 and +4
         this.hp = this.maxHP;
-        this.attack+= this.randGen.nextBoolean() ? 2:1;
-        this.def+= this.randGen.nextBoolean() ? 2:1;
+        this.attack += this.randGen.nextBoolean() ? 2:1;
+        this.def += this.randGen.nextBoolean() ? 2:1;
     }
 
     public long getMaxHP() {

@@ -321,8 +321,12 @@ public class Floor
                             String.valueOf(tiles.get(newLocation.x).get(newLocation.y).getEmpty()));
                     boolean killed = tiles.get(newLocation.x).get(newLocation.y).getActor().takeDamage(attack);
                     Log.v("Killed", String.valueOf(tiles.get(newLocation.x).get(newLocation.y).getActor().getEXP()));
-                    if(killed) return tiles.get(newLocation.x).get(newLocation.y).getActor().getEXP();
-                    else return 0;
+                    if(killed) {
+                        return tiles.get(newLocation.x).get(newLocation.y).getActor().getEXP();
+                    }
+                    else {
+                        return 0;
+                    }
                 }
             }
         }
@@ -377,6 +381,5 @@ public class Floor
 
     public void setPlayer(Player player) {
         tiles.get(playerX).get(playerY).setActor(player);
-
     }
 }
