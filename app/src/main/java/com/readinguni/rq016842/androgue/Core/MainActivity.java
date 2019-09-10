@@ -53,9 +53,9 @@ public class MainActivity extends Activity {
         mGameThread.setState(GameThread.STATE_READY);
     }
 
-	/*
-	 * Activity state functions
-	 */
+    /*
+     * Activity state functions
+     */
 
     /**
      * Pauses the game

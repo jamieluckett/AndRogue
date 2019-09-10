@@ -89,8 +89,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         holder.removeCallback(this);
     }
     /*
-	 * Setters and Getters
-	 */
+     * Setters and Getters
+     */
 
     /**
      * @param newThread
@@ -135,9 +135,9 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         this.mHandler = mHandler;
     }
 
-	/*
-	 * Screen functions
-	 */
+    /*
+     * Screen functions
+     */
 
     //ensure that we go into pause state if we go out of focus
     @Override

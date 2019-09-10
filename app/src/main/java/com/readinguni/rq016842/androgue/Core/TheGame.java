@@ -353,7 +353,7 @@ public class TheGame extends GameThread {
      * @param y Y-Coord of Touch
      */
     @Override
-	protected void actionOnTouch(float x, float y)
+    protected void actionOnTouch(float x, float y)
     {
         int buttonPressed = checkButton(x, y);
         if (buttonPressed > -1) //if a button has been pressed
